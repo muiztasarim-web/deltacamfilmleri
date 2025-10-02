@@ -1,0 +1,76 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: "tr"
+slug:
+  encoding: "unicode"
+  clean_accents: true
+
+collections:
+  # HİZMETLER
+  - name: "hizmetler"
+    label: "Hizmetler"
+    folder: "src/hizmetler"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Özet", name: "summary", widget: "text" }
+      - { label: "Tarih", name: "date", widget: "datetime" }
+      - { label: "Kapak", name: "cover", widget: "image" }
+      - { label: "SEO Başlık", name: "seo_title", widget: "string", required: false }
+      - { label: "SEO Açıklama", name: "seo_desc", widget: "text", required: false }
+      - { label: "İçerik", name: "body", widget: "markdown" }
+
+  # ÜRÜNLER
+  - name: "urunler"
+    label: "Ürünler"
+    folder: "src/urunler"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    fields:
+      - { label: "Ürün Adı", name: "title", widget: "string" }
+      - { label: "Öne Çıkan Not", name: "summary", widget: "text" }
+      - { label: "Teknik / VLT", name: "specs", widget: "text", required: false }
+      - { label: "Kapak", name: "cover", widget: "image" }
+      - { label: "SEO Başlık", name: "seo_title", widget: "string", required: false }
+      - { label: "SEO Açıklama", name: "seo_desc", widget: "text", required: false }
+      - { label: "İçerik", name: "body", widget: "markdown" }
+
+  # BLOG
+  - name: "blog"
+    label: "Blog"
+    folder: "src/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Kapak", name: "cover", widget: "image", required: false }
+      - { label: "SEO Başlık", name: "seo_title", widget: "string", required: false }
+      - { label: "SEO Açıklama", name: "seo_desc", widget: "text", required: false }
+      - { label: "İçerik", name: "body", widget: "markdown" }
+
+  # ANA SAYFA AYARLARI
+  - name: "ayarlar"
+    label: "Site Ayarları"
+    files:
+      - name: "anasayfa"
+        label: "Ana Sayfa"
+        file: "src/pages/home.yml"
+        fields:
+          - { label: "Hero Başlık", name: "hero_title", widget: "string" }
+          - { label: "Hero Alt Metin", name: "hero_sub", widget: "text" }
+          - { label: "Hero Desktop (1600)", name: "hero_1600", widget: "image" }
+          - { label: "Hero Tablet (1200)",  name: "hero_1200", widget: "image" }
+          - { label: "Hero Mobil (800)",    name: "hero_800",  widget: "image" }
+          - { label: "Öne Çıkan Kartlar", name: "featured", widget: "list", fields: [
+              { label: "Başlık",  name: "title", widget: "string" },
+              { label: "Özet",    name: "summary", widget: "text" },
+              { label: "Link",    name: "url", widget: "string" }
+            ] }
