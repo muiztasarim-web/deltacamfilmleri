@@ -9,10 +9,25 @@
 <body>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
-    if (window.netlifyIdentity) {
-      netlifyIdentity.on('login', function () { location.href = '/admin/'; });
-    }
+    (function () {
+      if (!window.netlifyIdentity) return;
+
+      // Sonsuz döngüyü önlemek için tek seferlik bayrak
+      var once = false;
+
+      netlifyIdentity.on('login', function () {
+        if (once) return;
+        once = true;
+        // Sadece /admin/ dışında ise yönlendir
+        if (location.pathname !== '/admin/') location.replace('/admin/');
+      });
+
+      netlifyIdentity.on('logout', function () {
+        location.replace('/');
+      });
+    })();
   </script>
+
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
