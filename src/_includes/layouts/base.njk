@@ -7,14 +7,18 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Delta Cam Filmleri</h1>
-  </header>
+  <header><h1>Delta Cam Filmleri</h1></header>
   <main class="container">
     {{ content | safe }}
   </main>
-  <footer>
-    <p>&copy; 2025 Delta Cam Filmleri</p>
-  </footer>
+  <footer><p>&copy; 2025 Delta Cam Filmleri</p></footer>
+
+  <!-- Identity widget (gerekirse) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      netlifyIdentity.on('login', function(){ location.href='/admin/'; });
+    }
+  </script>
 </body>
 </html>
