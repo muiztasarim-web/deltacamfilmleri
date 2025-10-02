@@ -1,7 +1,29 @@
----
-title: Delta Cam Filmleri
-layout: layouts/base.njk
----
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title or "Delta Cam Filmleri" }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Delta Cam Filmleri</h1>
+    <nav>
+      <a href="/">Ana Sayfa</a> |
+      <a href="/hizmetler/">Hizmetler</a> |
+      <a href="/urunler/">Ürünler</a> |
+      <a href="/blog/">Blog</a> |
+      <a href="/iletisim.html">İletişim</a>
+    </nav>
+  </header>
 
-<h2>Merhaba!</h2>
-<p>Bu site Eleventy + Decap CMS ile çalışıyor.</p>
+  <main class="container">
+    {{ content | safe }}
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Delta Cam Filmleri - Tüm hakları saklıdır.</p>
+  </footer>
+</body>
+</html>
