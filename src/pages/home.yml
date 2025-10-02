@@ -1,10 +1,16 @@
 hero_title: Cam Filmi ile Serin, Güvenli ve Şık Alanlar
-hero_sub: Oto, konut ve ofis için profesyonel cam filmi uygulamaları. Sertifikalı ürünler, uzman montaj ve garanti. 24 saat içinde hızlı dönüş.
-# Panelden ekleyeceksin:
-# hero_1600: /assets/yeni-site/hero-1600.webp
-# hero_1200: /assets/yeni-site/hero-1200.webp
-# hero_800:  /assets/yeni-site/hero-800.webp
+hero_sub: Oto, konut ve ofis için profesyonel cam filmi uygulamaları.
+  Sertifikalı ürünler, uzman montaj ve garanti. 24 saat içinde hızlı dönüş.
+hero_1600: /assets/uploads/hero-1600.webp
+hero_1200: /assets/uploads/hero-1200.webp
+hero_800: /assets/uploads/hero-800.webp
 featured:
-  - { title: "Premium Oto Film %20 VLT", summary: "Yüksek ısı reddi, net görüş.", url: "/urunler/seramik-oto-film/" }
-  - { title: "Isı Yalıtım Filmi Konut", summary: "Kışın sıcak, yazın serin.", url: "/urunler/isi-yalitim-serisi/" }
-  - { title: "Güvenlik Filmi 4Mil", summary: "Darbe ve kırılmaya dayanım.", url: "/urunler/guvenlik-seri/" }
+  - title: Premium Oto Film %20 VLT
+    summary: Yüksek ısı reddi, net görüş.
+    url: /urunler/seramik-oto-film/
+  - title: Isı Yalıtım Filmi Konut
+    summary: Kışın sıcak, yazın serin.
+    url: /urunler/isi-yalitim-serisi/
+  - title: Güvenlik Filmi 4Mil
+    summary: Darbe ve kırılmaya dayanım.
+    url: /urunler/guvenlik-seri/
