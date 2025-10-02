@@ -11,7 +11,6 @@ slug:
   clean_accents: true
 
 collections:
-  # HİZMETLER
   - name: "hizmetler"
     label: "Hizmetler"
     folder: "src/hizmetler"
@@ -27,7 +26,6 @@ collections:
       - { label: "SEO Açıklama", name: "seo_desc", widget: "text", required: false }
       - { label: "İçerik", name: "body", widget: "markdown" }
 
-  # ÜRÜNLER
   - name: "urunler"
     label: "Ürünler"
     folder: "src/urunler"
@@ -43,7 +41,6 @@ collections:
       - { label: "SEO Açıklama", name: "seo_desc", widget: "text", required: false }
       - { label: "İçerik", name: "body", widget: "markdown" }
 
-  # BLOG
   - name: "blog"
     label: "Blog"
     folder: "src/blog"
@@ -56,7 +53,6 @@ collections:
       - { label: "SEO Açıklama", name: "seo_desc", widget: "text", required: false }
       - { label: "İçerik", name: "body", widget: "markdown" }
 
-  # ANA SAYFA AYARLARI
   - name: "ayarlar"
     label: "Site Ayarları"
     files:
