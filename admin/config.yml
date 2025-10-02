@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: KULLANICI_ADI/deltacamfilmleri   # ← kendi GitHub repo yolunu yaz
+  name: git-gateway
   branch: main
 
 media_folder: "src/assets/uploads"
